@@ -1,3 +1,5 @@
+const { spawn } = require("child_process");
+const { exec } = require('child_process');
 const chatBody=document.querySelector(".chat-body");
 const messageInput=document.querySelector(".message-input");
 const sendMessageButton=document.querySelector("#send-message");
@@ -5,6 +7,8 @@ const queries = [];
 const userData={
     message:null
 }
+
+const sam={'query':"JavaScript File Info"}
 
 const createMessageElement=(content,...classes)=>{
     const div=document.createElement("div");
@@ -51,12 +55,16 @@ const handleuserMessage =(sam)=>{
     sam.preventDefault();
     userData.message=messageInput.value.trim();
     messageInput.value="";
+    const py = spawn("python", ["sag.py", `${userData.message}`,"fghj"]);
+   py.stdout.on("data",function(data){
+    console.log(data.toString())
+    })
+     console.log(userData.message)
 
-      console.log(userData)
         chatBody.scrollTo({top:chatBody.scrollHeight,behavior:"smooth"});
 
     setTimeout(()=>{
-        const messageContent=`  
+        const messageContent=`  <img src="aireply.png" alt="Description" height="20px>
              <div class="message-text">
                 <div class="thinking-indicator">
                     <div class="dot"></div>
