@@ -7,6 +7,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain.schema.runnable import RunnableParallel,RunnablePassthrough
 from operator import itemgetter
 import json
+import sys
+
 
 load_dotenv()
 api_key=os.getenv('API_KEY')
@@ -36,7 +38,7 @@ def llm(query):
     return response
 
 
-
-response=llm("i want to learn Wev Dev")
+query=sys.argv[1]
+response=llm(query)
 print(response)
 
