@@ -56,7 +56,7 @@ const handleuserMessage =(sam)=>{
         chatBody.scrollTo({top:chatBody.scrollHeight,behavior:"smooth"});
 
     setTimeout(()=>{
-        const messageContent=`  <img src="aireply.png" alt="Description" height="20px>
+        const messageContent=`  
              <div class="message-text">
                 <div class="thinking-indicator">
                     <div class="dot"></div>
