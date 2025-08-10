@@ -265,6 +265,9 @@ h4:hover {
 
 /* Container for each item */
 .step-card {
+     display: block;    
+    width: 100%;        
+    box-sizing: border-box;
     background: #ffffff;
     border: 1px solid #e5e5e5;
     border-radius: 12px;
@@ -322,13 +325,37 @@ h4:hover {
     border: 1px solid #d6dcff;
 }
 
-.step-card {
-    display: block;    
-    width: 100%;        
-    box-sizing: border-box;
-}
+
 .container-class {
-    display: block ;
-    flex-direction: column; 
-    gap: 20px;              
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    gap: 20px; /* space between steps */
+    width: 100%;
+}
+
+
+
+
+
+/* Make checkbox bigger */
+#item {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Change accent color (modern browsers only) */
+#item {
+    accent-color: #4CAF50; /* green tick */
+}
+
+/* Optional: add spacing if it's next to text */
+#item + label {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+/* Optional hover effect */
+#item:hover {
+    filter: brightness(0.9);
 }

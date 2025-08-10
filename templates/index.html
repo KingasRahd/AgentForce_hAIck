@@ -49,10 +49,15 @@
       <div class="bot-avtr"><img src="/static/aireply.png" alt="AIlOGO" height="20px"></div>
       <div class="message-text"> How can i help you ?</div>
 
-      <br>
+      </div>
+  
+      <script>const len='{{s|length}}'</script>
    {% for item in l %}
+ 
+
    <div class="container-class">
 <div class="step-card">
+  <input type="checkbox" id="item" name="" value="" onclick="sam(len,this)">
     <h1 class="step-title">Step: {{item.step_number}}</h1>
     
     <h3 class="section-title">Description</h3>
@@ -80,7 +85,7 @@
     </div>
 </div></div>
 {% endfor %}
-
+  </div>
 
 
 
@@ -90,7 +95,7 @@
   <div class="chat-footer">
     <form action="/" class="chat-form" method="post">
 
-      <input type="inp" name="inp" class="message-input" required placeholder="Enter your email">
+      <input type="inp" name="inp" class="message-input" required placeholder="Enter your Query....">
       <div class="chat-controls">
         <button onclick="sam()" type="submit" id="send-message" class="material-symbols-rounded ">✚</button>
       </div>
@@ -99,5 +104,7 @@
   </div>
    
 </body>
+
    <script src="/static/spt.js"></script>
+   <script src="/static/prog.js"></script>
 </html>

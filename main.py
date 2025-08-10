@@ -2,7 +2,7 @@ from plyer import notification
 import schedule,time
 
 def note():
-    message="this is a test message"
+    message="You have Pending Tasks to Complete..."
     notification.notify(
         title="Task Reminder",
         message=message,
