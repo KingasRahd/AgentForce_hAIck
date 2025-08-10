@@ -49,11 +49,37 @@
       <div class="bot-avtr"><img src="/static/aireply.png" alt="AIlOGO" height="20px"></div>
       <div class="message-text"> How can i help you ?</div>
 
+      <br>
+   {% for item in l %}
+   <div class="container-class">
+<div class="step-card">
+    <h1 class="step-title">Step: {{item.step_number}}</h1>
+    
+    <h3 class="section-title">Description</h3>
+    <div class="description-text">{{item.description}}</div>
+    
+    <h3 class="section-title">Courses</h3>
+    <div class="item-list">
+       {% for x in item.courses %}
+         <div class="item-badge">{{x}}</div>
+       {% endfor %}
     </div>
-
-  </div>
-
-
+    
+    <h3 class="section-title">Projects</h3>
+    <div class="item-list">
+       {% for x in item.projects %}
+         <div class="item-badge">{{x}}</div>
+       {% endfor %}
+    </div>
+    
+    <h3 class="section-title">Online Certifications</h3>
+    <div class="item-list">
+        {% for x in item.online_certifications %}
+         <div class="item-badge">{{x}}</div>
+        {% endfor %}
+    </div>
+</div></div>
+{% endfor %}
 
 
 
@@ -71,7 +97,7 @@
     </form>
   </div>
   </div>
- 
+   
 </body>
-
+   <script src="/static/spt.js"></script>
 </html>
