@@ -88,6 +88,7 @@ try:
             response=llm(name)
            
             print(response)
+            #db_store(response)
         
             return render_template('index.html',l=json.loads(response),s=json.loads(response))
         else:

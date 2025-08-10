@@ -9,7 +9,7 @@ def note():
         timeout=5
     )
 
-schedule.every(10).seconds.do(note)
+schedule.every().monday.at("09:00").do(note)
 
 while True:
     schedule.run_pending()
