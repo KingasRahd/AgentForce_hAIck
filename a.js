@@ -13,5 +13,5 @@ exec('python helper.py', (error, stdout, stderr) => {
 
     const obj=JSON.parse(stdout);
 
- console.log("new Output:",obj[3]);
+ console.log("a json file:",obj[3]);
 })
